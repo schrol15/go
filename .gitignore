@@ -22,6 +22,8 @@ _testmain.go
 *.exe
 .DS_Store
 .idea
+*.log
 
 coverage.txt
-
+coverage.json
+coverage.xml
