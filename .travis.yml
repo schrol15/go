@@ -5,8 +5,15 @@ go:
   - 1.7.6
   - 1.8.5
   - 1.9.2
+  - 1.10
+  - tip
 
 go_import_path: github.com/pubnub/go
+
+matrix:
+  allow_failures:
+    - go: tip
+  fast_finish: true    
 
 install:
   - mkdir -p $GOPATH/src/github.com/pubnub
@@ -16,3 +23,5 @@ script:
 
 after_success:
     - bash <(curl -s https://codecov.io/bash)
+addons:
+  srcclr: true
